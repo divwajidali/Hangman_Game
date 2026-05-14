@@ -84,3 +84,17 @@ fun_words = [
 ]
 
 
+word_categories = {
+    1 : easy_words,
+    2 : medium_words,
+    3 : hard_words,
+    4 : animals,
+    5 : countries,
+    6 : technology,
+    7 : fun_words
+}
+
+choice = int(input("1. Easy Words\n2. Medium Words\n3. Hard Words\n4. Animals\n5. Countries\n6. Technologies\n7. Fun Words\nEnter Choice :"))
+
+selected_words = word_categories[choice]
+print(selected_words)
