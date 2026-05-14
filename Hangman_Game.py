@@ -119,3 +119,37 @@ import random
 
 target = random.choice(selected_words)
 
+display = []
+
+for i in range(len(target)):
+    display.append("_")
+
+print(display)
+
+
+lives = 10
+
+while True:
+    if "_" not in display:
+        print(f"Word : {target}")
+        print("You Win!\nGame Over.")
+        break
+
+    elif (lives == 0):
+        print(f"You Loose!\nWord : {target}\nGame Over")
+        break
+
+    guess = input("Enter Guess :")
+
+
+    if guess in target:
+        for i in range(len(target)):
+            if target[i] == guess:
+                display[i] = guess
+                print(f"Lives : {lives}")
+                print(display)
+
+    else:
+        print("Wrong Guess.")
+        lives -= 1
+        print(f"Lives : {lives}")
